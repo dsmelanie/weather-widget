@@ -1,0 +1,19 @@
+footer {
+    font-size: 0.8rem;
+    margin-top: rem;
+    font-family: 'Righteous', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white
+}   
+
+a {
+    color: #3394cc;
+    text-decoration: none;
+
+    &:hover {
+        color: #176c9e;
+        text-decoration: none;
+    }
+}
