@@ -3,7 +3,15 @@
 
 ## 🖱️ | Link
 
-- Live Site URL : [Click](https://rdsmelanie.github.io/weather-widget)
+- Live Site URL : [Click](https://rdsmelanie-weather-widget.surge.sh/)
+
+---
+
+## 💻 | Screenshot
+
+<br>
+
+![IMG](./src/assets/demo.gif)
 
 ---
 
