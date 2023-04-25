@@ -17,7 +17,7 @@ function Header({ onSubmit }: HeaderProps) {
 
   return (
     <header className='header'>
-      <h2 className='header-title'><img width='50px' src={logo} alt="Logo"/>&nbsp;Weather Widget</h2>
+      <h2 className='header-title'><img width='50px' src={logo} alt="Logo"/> Weather Widget</h2>
       <form className='header-form' onSubmit={handleSubmit}>
         <input className='header-input' type="text" name="cityInput" placeholder='Enter a city..' />
       </form>

@@ -12,3 +12,13 @@
     font-size: 0.9rem;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .error {
+    width: 85%;
+    
+    &-message {
+      font-size: 0.7rem;
+    }
+  }
+}

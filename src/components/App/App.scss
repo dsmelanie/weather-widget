@@ -33,5 +33,19 @@ button {
   color: white;
   border: none;
   font-weight: bold;
+  margin-bottom: 1.5rem;
+
+  &:hover {
+    background-color: #3394cc;
+  }
 }
 
+@media screen and (max-width: 500px) {
+  .app {
+    width: 75%;
+  }
+
+  button {
+    margin-bottom: 1.5rem;
+  }
+}

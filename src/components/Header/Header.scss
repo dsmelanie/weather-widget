@@ -36,3 +36,27 @@
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .header {
+    width: 100%;
+
+    &-title {
+      margin-top: 0.5rem;
+      font-size: 2rem;
+
+      & > img {
+        display: none;
+      }
+    }
+
+    &-form {
+      margin-bottom: 0.5rem;
+    }
+
+    &-input {
+      margin-left: 0.3rem;
+      width: 85%;
+    }
+  }
+}

@@ -36,7 +36,7 @@ function App() {
 
   return (
     <>
-      <button onClick={toggleUnit}>{unit === 'metric' ? 'Celcius (C°)' : 'Farenheit (F°)'}</button>
+      <button onClick={toggleUnit}>{unit === 'metric' ? 'Celcius (°C)' : 'Fahrenheit (°F)'}</button>
         <div className='app'>
           <Header onSubmit={handleSubmit} />
           {!isCityCorrect && <ErrorMessage city={cityNameError} />}
