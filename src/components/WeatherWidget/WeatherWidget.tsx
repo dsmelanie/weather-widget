@@ -32,11 +32,15 @@ function WeatherWidget({ city, unit }: WeatherWidgetProps) {
     );
 
     const displayTemperature = () => {
-        if (unit === 'imperial') {
-            return Math.round(temperature * 1.8 + 32) + '°F';
+        if (unit === 'metric') {
+          return temperature + '°C';
+        } else {
+          const fahrenheit = Math.round(temperature * 10) / 10;
+          return fahrenheit + '°F';
         }
-        return temperature + '°C';
-    }
+      }
+      
+    
 
     return (
         <div className="meteo">
