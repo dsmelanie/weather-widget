@@ -1,55 +1,37 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(320deg, lightskyblue, rgb(97, 172, 218), rgb(25, 108, 160));
+  min-height: 100vh;
+  background-image: url(../../assets/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .app {
-  width: 350px;
+  width: 500px;
   background-color: #ffffff44;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  padding: 1rem 2rem;
-  margin: auto;
-  margin-top: 5rem;
-}
-
-.error-message {
-  font-size: 1.5rem;
-  color: #3394cc;
-  font-size: 0.8rem;
-  margin-top: 2rem;
-}
-
-h2 {
-  font-family: 'Righteous', cursive;
-  display: flex;
-  align-items: center;
-  color: white;
-  font-size: 2rem;
-  letter-spacing: 0.02rem;
-}
-
-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-input {
-  width: 300px;
-  border: none;
-  border-radius: 10px; 
   padding: 1rem;
-  background-color: aliceblue;
-  color: #3394cc;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin: auto;
+  margin-top: 2rem;
+  position: relative;
+}
+
+
+button {
+  position: relative;
+  top: 2rem;
+  left: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #3394cc99;
+  color: white;
+  border: none;
   font-weight: bold;
 }
 
-::placeholder {
-  color: #3394cc6b;
-}
-
-:focus {
-  outline: none;
-}

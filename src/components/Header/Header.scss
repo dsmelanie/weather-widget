@@ -1,0 +1,38 @@
+.header {
+
+  &-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Righteous', cursive;
+    color: white;
+    font-size: 2.7rem;
+    letter-spacing: 0.02rem;
+  }
+
+  &-form {
+    margin-bottom: 1rem;
+  }
+
+  &-input {
+    width: 425px;
+    border: none;
+    border-radius: 10px; 
+    padding: 1rem;
+    background-color: aliceblue;
+    color: #3394cc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+
+    &::placeholder {
+      color: #3394cc6b;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

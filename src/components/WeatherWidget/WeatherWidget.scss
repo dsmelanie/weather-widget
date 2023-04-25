@@ -1,13 +1,5 @@
-body {
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(320deg, lightskyblue, rgb(97, 172, 218), rgb(25, 108, 160));
-  min-height: 100vh;
-  background-image: url(../../assets/background.svg);
-}
-
 .meteo {
-  margin: 1.5rem auto;
-  width: 300px;
+  width: 425px;
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 10px; 
   padding: 1rem;
@@ -16,21 +8,22 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
 
   &-city {
     font-size: 1.5em;
     font-weight: bold;
+    margin-bottom: 0.2rem;
   }
 
-  &-zipcode {
-    opacity: 0.70;
-    margin-bottom: 0.5rem;
+  &-description {
+    margin-top: 0.5rem;
+    color: aliceblues;
   }
 
   &-temperature {
     font-size: 2em;
     font-weight: bold;
-
   }
 }
-

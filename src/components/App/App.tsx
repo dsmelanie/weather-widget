@@ -1,45 +1,47 @@
-import { useState, FormEvent } from 'react';
+import { useState } from 'react';
+
+import Header from '../Header/Header';
 import WeatherWidget from '../WeatherWidget/WeatherWidget';
-import logo from '../../assets/logo.png';
-import './App.scss';
+import ErrorMessage from '../Error/Error';
 import Footer from '../Footer/Footer';
+
+import './App.scss';
 
 function App() {
   const [city, setCity] = useState('');
   const [isCityCorrect, setIsCityCorrect] = useState(true);
   const [cityNameError, setCityNameError] = useState('');
+  const [unit, setUnit] = useState('metric');
 
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const formData = new FormData(event.target as HTMLFormElement);
-    const cityName = formData.get("cityInput") as string;
-
+  const handleSubmit = async (city: string) => {
     const API_KEY = import.meta.env.VITE_API_KEY;
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`;
+    const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`;
 
-    const response = await fetch(apiUrl);
+    const response = await fetch(API_URL);
     const data = await response.json();
 
     if (data.cod === "404") {
       setIsCityCorrect(false);
-      setCityNameError(cityName);
+      setCityNameError(city);
     } else {
-      setCity(cityName);
+      setCity(city);
       setIsCityCorrect(true);
       setCityNameError('');
     }
   };
 
+  const toggleUnit = () => {
+    setUnit(unit === 'metric' ? 'imperial' : 'metric');
+  }
+
   return (
     <>
-      <div className='app'>
-        <h2><img width='50px' src={logo} alt="Logo"/>&nbsp;Weather Widget</h2>
-        <form onSubmit={handleSubmit}>
-          <input id="city-input" type="text" name="cityInput" placeholder='Enter a city..' />
-        </form>
-        {!isCityCorrect && <p className='error-message'>"{cityNameError}" cannot be found, please try again.</p>}
-        {city && isCityCorrect && <WeatherWidget city={city} />}
-      </div>
+      <button onClick={toggleUnit}>{unit === 'metric' ? 'Celcius (C°)' : 'Farenheit (F°)'}</button>
+        <div className='app'>
+          <Header onSubmit={handleSubmit} />
+          {!isCityCorrect && <ErrorMessage city={cityNameError} />}
+          {city && isCityCorrect && <WeatherWidget city={city} unit={unit} />}
+        </div>
       <Footer />
     </>
   );
