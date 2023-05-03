@@ -4,7 +4,7 @@ function Footer () {
   return (
     <footer>
        <p>
-        Coded with <b>&#10084;</b> by <a href="https://github.com/rdsmelanie" target="_blank">@rdsmelanie</a>
+        Coded with <b>&#10084;</b> by <a href="https://github.com/dsmelanie" target="_blank">@dsmelanie</a>
       </p>
     </footer>
   )
