@@ -3,7 +3,7 @@
 
 ## 🖱️ | Link
 
-- Live Site URL : [Click](https://rdsmelanie-weather-widget.surge.sh/)
+- Live Site URL : [Click](https://dsmelanie-weather-widget.surge.sh/)
 
 ---
 
@@ -17,4 +17,4 @@
 
 ## 🖋️ | Author
 
-- GitHub - [@rdsmelanie](https://github.com/rdsmelanie)
+- GitHub - [@dsmelanie](https://github.com/dsmelanie)
